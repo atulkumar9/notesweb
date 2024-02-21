@@ -1,0 +1,26 @@
+
+ <p><%= link_to("<< Back to menu", {:controller => 'note', :action => 'index'}, :class => 'back-link') %></p>
+<div class="Note show" align = "center">
+
+ 
+
+  <h2>Your Note...</h2>
+  <hr>
+
+  <% @notes.each do |note| %>
+    <table summary="Note show" class = "Note show">
+      <tr>
+          <th>Title</th>
+          <td><%= note.title %></td>
+        </tr>
+        <tr>
+           <th>Note</th>
+           <td><%= note.text %></td>
+        </tr>
+      </tr>
+    </table>
+    <hr>
+  <% end %>
+  
+
+</div>

@@ -1,0 +1,28 @@
+
+<div class = "sign up">
+  <h2>Sign Up</h2>
+
+  <%= form_for(:user, :url => {:action => 'create'}) do |f| %>
+
+    <table summary = "User form fields">
+      <tr>
+        <th>Enter Name</th>
+        <td><%= f.text_field(:name) %>
+        </td>
+      </tr>
+      <tr>
+        <th>Enter user Name</th>
+        <td><%= f.text_field(:username) %></td>
+      </tr>
+      <tr>
+        <th>Enter Password</th>
+        <td><%= f.password_field(:password) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Register") %>
+    </div>
+ 
+  <% end %>
+</div>

@@ -1,0 +1,28 @@
+<%= link_to("<< Back to Note List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class = "note edit">
+  <h2>Update Note</h2>
+
+  <%= form_for(:note, :url => {:action => 'update', :id => @note.id}) do |f| %>
+
+    <table summary = "Note form fields">
+      <th>Enter Your Note Title</th>
+      </tr>
+      <tr>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <tr>
+      <tr>
+        <th>Enter Your Note</th>
+      </tr>
+      <tr>
+        <td><%= f.text_area(:text, rows: 20, "data-provide" => "markdown") %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Note") %>
+    </div>
+ 
+  <% end %>
+</div>

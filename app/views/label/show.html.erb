@@ -1,0 +1,20 @@
+<p><%= link_to("<< Back to List of notes", {:controller => 'note', :action => 'index'}, :class => 'back-link') %></p>
+
+<div class="label show">
+
+  <h2>Your Labels...</h2>
+
+  <table summary = "Label detail view">
+    <tr>
+     <th>Labels</th>
+    </tr>
+    <tr>
+      <% @labels.each do |label| %>
+   		 	<th><%= label.name %></th>
+   		 	<th><%= link_to("Notes Associated", {:controller => 'note', :action => 'show2', :id => label.id}, :class => 'action notes_assocoated') %></th>
+   		 	<th><%= link_to("Delete", {:action => 'destroy', note_label: {:label_id => label.id,  :note_id => @note.id}}, :class => 'action delete') %></th>	
+    </tr>
+      <% end %> 
+  </table>
+  
+</div>

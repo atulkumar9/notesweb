@@ -1,0 +1,1 @@
+Notesweb::Application.config.secret_key_base = 'ca16b030a7b32a2425b47b20378e1b33bbefa74ad547dad74f3b59dbcf4e7bd52b0545264503612c554f4781027e8f8cedc9b32a4486d1a2487cc6c71a656b2d'

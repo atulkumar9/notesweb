@@ -1,0 +1,33 @@
+
+<div class="Note show" align = "center">
+
+  <p><%= link_to("<< Back to List of notes", {:action => 'index'}, :class => 'back-link') %></p>
+
+  <h2>Your Note...</h2>
+
+  <table summary="Note detail view">
+    <tr>
+        <th>Title</th>
+        <td><%= @note.title %></td>
+    </tr>
+    <tr>
+        <th>Note</th>
+      	<td><%= @note.text %></td>
+    </tr>
+    <tr>
+      <th>Labels</th>
+      <% @labels.each do |label| %>
+        <td><%= label.name %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>Note Created at</th>
+      <td><%= @note.created_at %></td>
+    </tr>
+    <tr>
+      <th>Note Updated at</th>
+      <td><%= @note.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

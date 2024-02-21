@@ -1,0 +1,11 @@
+<% @page_title = "Start" %>
+
+<div class="login">
+    <tr>
+      <td><button><%= link_to("LOGIN", {:controller => 'access', :action => 'login'}, :class => 'sign up') %></button></td>
+    <tr>
+      <td><button><%= link_to("SIGN UP", {:controller => 'user', :action => 'new'}, :class => 'sign up') %></button></td>
+    </tr>
+  </table>
+  <% end %>
+</div>

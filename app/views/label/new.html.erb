@@ -1,0 +1,27 @@
+
+<div class = "label index">
+<%= link_to("Back", {:controller => 'note'}, :class => 'action note') %>
+</div>
+
+<div class = "label new">
+
+  <h2 align = "center">Create Label</h2>
+
+  <%= form_for(:label, :url => {:action => 'create', :note_id => @note.id}) do |f| %>
+
+    <table summary = "label form fields">
+      <tr>
+        <th>Enter Your Tag</th>
+      </tr>
+      <tr>
+        <td><%= f.text_field(:name) %></td>
+        <td><%= hidden_field_tag :id, @note.id %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Add Label") %>
+    </div>
+ 
+  <% end %>
+</div>

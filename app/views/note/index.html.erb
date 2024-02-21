@@ -1,0 +1,31 @@
+
+<div align = "center" class="Notes index">
+  <h2 align = "center">Your Notes</h2>
+
+  <%= link_to("Add New Note", {:action => 'new'}, :class => 'action new') %> 
+  <%= link_to("Back", {:controller => 'access'}, :class => 'action access') %>
+
+ 
+  <table align = "center" class="listing" summary="Note list">
+    <tr class="header">
+      <th>Note Title</th>
+      <th>Note Actions</th>
+      <th>Label Action</th>
+    </tr>
+    <% @notes.each do |note| %>
+    <tr>
+      <td><%= note.title %></td>
+      <td class="actions">
+        <%= link_to("Show note", {:action => 'show', :id => note.id}, :class => 'action show') %>
+        <%= link_to("Edit note", {:action => 'edit', :id => note.id}, :class => 'action edit') %>
+        <%= link_to("Delete Note", {:action => 'destroy', :id => note.id}, :class => 'action delete', :remote => true) %>
+      </td>
+      <td class="actions">
+        <%= link_to("Add label", {:controller => 'label', :action => 'new', :id => note.id}, :class => 'action add_label') %>
+        <%= link_to("Show all labels", {:controller => 'label', :action => 'show', :id => note.id}, :class => 'action show_all_labels') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>

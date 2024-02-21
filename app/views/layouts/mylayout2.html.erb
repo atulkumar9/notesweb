@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Notesweb | <%= @page_title || "mylayout" %></title>
+    <%= stylesheet_link_tag('mylayout', :media => 'all') %>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Notesweb</h1>
+    </div>
+    <div id="main">
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer">
+    </div>
+  </body>
+</html>
